@@ -1,0 +1,49 @@
+1全局设置 当前计算机所有git仓库的用户信息
+      git config --global user.name "your name"
+       git config --global user.name "youe email"
+2.新建文件夹---找一个空的文件夹座位版本库的存储
+      mkdir filename--新建文件夹
+      cd ------打开某个文件夹
+      pwd----显示当前工作路径
+3.新建版本库。初始化版本库
+        git init----创建一个默认隐藏的.git文件夹（根据计算机设置判断是否隐藏）
+
+4.如果找不到当前文件夹下.git文件夹，可以通过命令行常看是否存在
+     ls -ah
+5.提交文件到仓库中，分两步：
+    （1）添加一个文件到仓库内部------命令是add filename
+     (2)附加提交该文档的说明信息----git commit -m      'message(你想要写的说明信息)'
+6.查看当前仓库的状态变化--查看当前文件是否做好提交准备
+        git status
+7.查看文件修改内容
+        git diff filename
+8.查看最近提交至仓库的修改的日志内容
+        git log
+9.版本回退
+        HEAD---当前的版本：  HEAD^--上一个版本
+        HEAD~5---往上数5个版本，某个版本
+        git reset---hard HEAD^返回上一个版本
+        git reset ---hard 版本号 返回的是某个版本
+10. 查看当前版本具体内容
+        cat filename
+11.记录当前的所有命令
+        git reflog
+
+12.git add ---可以添加多个文档，添加内容保存在暂存区内
+    git commit---一次性把暂存区内的多个文档提交至git仓库
+13.撤销工作区文件的修改---未提交至暂存区前
+   git checkout  --filename
+14.提交至暂存区后，撤销当前的提交状态--把暂存区的版本回退到工作区内
+git reset HEAD readme.txt
+15.删除 
+   rm  
+ 
+
+
+
+
+
+
+
+
+
